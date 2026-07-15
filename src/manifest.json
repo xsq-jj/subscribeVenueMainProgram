@@ -1,0 +1,21 @@
+{
+  "name": "运动场地预约",
+  "appid": "__UNI__SPORT_BOOKING",
+  "description": "运动场地预约用户端",
+  "versionName": "0.1.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "uniStatistics": {
+    "enable": false
+  },
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false
+    },
+    "usingComponents": true
+  },
+  "h5": {
+    "title": "运动场地预约"
+  }
+}

@@ -1,0 +1,125 @@
+$sport-primary: #10b981;
+$sport-primary-dark: #059669;
+$sport-danger: #ff3b6b;
+$sport-warning: #f59e0b;
+$sport-text: #121827;
+$sport-muted: #8a93a3;
+$sport-border: #edf0f4;
+$sport-bg: #f6f7f9;
+$sport-card: #ffffff;
+
+@font-face {
+  font-family: 'remixicon';
+  src: url('/static/fonts/remixicon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ri {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.ri-arrow-left-s-line::before { content: '\ea64'; }
+.ri-arrow-right-s-line::before { content: '\ea6e'; }
+.ri-arrow-down-s-line::before { content: '\ea4e'; }
+.ri-question-line::before { content: '\f045'; }
+.ri-coupon-2-line::before { content: '\ebe6'; }
+.ri-time-line::before { content: '\f20f'; }
+.ri-gift-2-line::before { content: '\edb9'; }
+.ri-search-line::before { content: '\f0d1'; }
+.ri-close-line::before { content: '\eb99'; }
+.ri-delete-bin-line::before { content: '\ec2a'; }
+.ri-fire-line::before { content: '\ed33'; }
+.ri-filter-3-line::before { content: '\ed25'; }
+.ri-map-pin-line::before { content: '\ef14'; }
+.ri-gps-line::before { content: '\eddb'; }
+.ri-building-4-line::before { content: '\eb0d'; }
+.ri-check-line::before { content: '\eb7b'; }
+.ri-star-fill::before { content: '\f186'; }
+.ri-star-line::before { content: '\f18b'; }
+.ri-heart-fill::before { content: '\ee0e'; }
+.ri-heart-line::before { content: '\ee0f'; }
+.ri-thumb-up-line::before { content: '\f207'; }
+.ri-chat-1-line::before { content: '\eb4d'; }
+.ri-basketball-line::before { content: '\eaa8'; }
+.ri-base-station-line::before { content: '\eaa6'; }
+.ri-football-line::before { content: '\ed8f'; }
+.ri-more-line::before { content: '\ef79'; }
+.ri-calendar-line::before { content: '\eb27'; }
+.ri-home-4-line::before { content: '\ee1d'; }
+.ri-building-line::before { content: '\eb0f'; }
+.ri-file-list-3-fill::before { content: '\ecee'; }
+.ri-file-list-3-line::before { content: '\ecef'; }
+.ri-user-line::before { content: '\f264'; }
+
+.page-shell {
+  min-height: 100vh;
+  background: $sport-bg;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.safe-bottom {
+  padding-bottom: calc(28rpx + env(safe-area-inset-bottom));
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 20px 14px;
+  color: $sport-text;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.section-more {
+  color: $sport-muted;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.surface-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background: $sport-card;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.06);
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, $sport-primary 0%, $sport-primary-dark 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ghost-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 24px;
+  background: #fff;
+  color: #7b8495;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.price {
+  color: $sport-danger;
+  font-weight: 900;
+}
