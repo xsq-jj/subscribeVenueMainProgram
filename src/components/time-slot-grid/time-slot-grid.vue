@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import type { VenueSlot } from '@/types/domain'
 
-const props = defineProps<{
+defineProps<{
   items: VenueSlot[]
   modelValue: number
 }>()
@@ -28,12 +28,13 @@ const emit = defineEmits<{
 
 function statusText(status: VenueSlot['status'], active: boolean) {
   if (status === 'soldOut') return '已约满'
+  if (status === 'locked') return '锁定中'
   if (active || status === 'selected') return '已选择'
   return '可预约'
 }
 
 function select(item: VenueSlot) {
-  if (item.status === 'soldOut') return
+  if (item.status === 'soldOut' || item.status === 'locked') return
   emit('update:modelValue', item.id)
 }
 </script>
@@ -43,17 +44,17 @@ function select(item: VenueSlot) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14rpx;
-  padding: 0 32rpx;
+  padding: 0 35rpx;
 }
 
 .slot {
   display: flex;
-  min-height: 118rpx;
+  min-height: 148rpx;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 2rpx solid #bdf4d8;
-  border-radius: 16rpx;
+  border: 1rpx solid #bbf7d0;
+  border-radius: 21rpx;
   background: #f0fff7;
   color: #059669;
 }
@@ -65,29 +66,30 @@ function select(item: VenueSlot) {
   color: #fff;
 }
 
-.slot-soldOut {
+.slot-soldOut,
+.slot-locked {
   border-color: #edf0f4;
   background: #f0f2f5;
   color: #a5adbb;
 }
 
 .slot-time {
-  font-size: 27rpx;
-  font-weight: 900;
+  font-size: 24rpx;
+  font-weight: 700;
   line-height: 1.1;
 }
 
 .slot-price {
-  margin-top: 12rpx;
-  font-size: 22rpx;
-  font-weight: 800;
+  margin-top: 4rpx;
+  font-size: 21rpx;
+  font-weight: 400;
   line-height: 1;
 }
 
 .slot-status {
-  margin-top: 8rpx;
-  font-size: 21rpx;
-  font-weight: 800;
+  margin-top: 4rpx;
+  font-size: 19rpx;
+  font-weight: 400;
   line-height: 1;
 }
 </style>

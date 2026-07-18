@@ -22,14 +22,14 @@
       </view>
 
       <view class="meta-row">
-        <text class="meta-icon">⌖</text>
+        <text class="ri ri-map-pin-line"></text>
         <text>{{ venue.district }} · {{ venue.address }}</text>
-        <text v-if="showDistance" class="distance">⌁ {{ venue.distance }}</text>
+        <text v-if="showDistance" class="distance">· {{ venue.distance }}</text>
       </view>
 
       <view class="bottom-row">
         <view v-if="showAvailable" class="available">
-          <text class="clock">◷</text>
+          <text class="ri ri-time-line"></text>
           <text>{{ venue.todayAvailableText }}</text>
         </view>
         <view class="price-wrap">
@@ -63,18 +63,20 @@ defineEmits<{
 
 <style scoped lang="scss">
 .venue-card {
-  margin: 0 32rpx 24rpx;
+  margin: 0 35rpx 21rpx;
+  border-radius: 28rpx;
+  box-shadow: 0 3rpx 21rpx rgba(0, 0, 0, 0.06);
 }
 
 .venue-cover {
   display: block;
   width: 100%;
-  height: 192rpx;
+  height: 307rpx;
   background: #dbe3ea;
 }
 
 .venue-body {
-  padding: 22rpx 24rpx 24rpx;
+  padding: 28rpx;
 }
 
 .venue-title-row,
@@ -95,36 +97,37 @@ defineEmits<{
 
 .venue-title {
   max-width: 440rpx;
-  color: #121827;
-  font-size: 30rpx;
-  font-weight: 900;
+  color: #1a1a2e;
+  font-size: 28rpx;
+  font-weight: 600;
   line-height: 1.25;
 }
 
 .venue-score {
-  gap: 6rpx;
-  color: #111827;
-  font-size: 26rpx;
-  font-weight: 800;
+  gap: 7rpx;
+  color: #1a1a2e;
+  font-size: 24rpx;
+  font-weight: 600;
 }
 
 .star {
   color: #f59e0b;
-  font-size: 25rpx;
+  font-size: 24rpx;
 }
 
 .tag-row {
   flex-wrap: wrap;
-  gap: 12rpx;
-  margin-top: 16rpx;
+  gap: 14rpx;
+  margin-top: 10rpx;
 }
 
 .tag {
-  padding: 5rpx 12rpx;
-  border-radius: 8rpx;
-  font-size: 22rpx;
-  font-weight: 800;
-  line-height: 1.2;
+  height: 37rpx;
+  padding: 0 14rpx;
+  border-radius: 10rpx;
+  font-size: 19rpx;
+  font-weight: 500;
+  line-height: 37rpx;
 }
 
 .tag-green {
@@ -148,30 +151,27 @@ defineEmits<{
 }
 
 .meta-row {
-  gap: 8rpx;
-  margin-top: 22rpx;
-  color: #9aa3b2;
-  font-size: 24rpx;
-  font-weight: 600;
+  gap: 7rpx;
+  margin-top: 14rpx;
+  color: #9ca3af;
+  font-size: 21rpx;
+  font-weight: 400;
 }
 
 .distance {
-  margin-left: 12rpx;
+  margin-left: 21rpx;
 }
 
 .bottom-row {
-  margin-top: 24rpx;
+  margin-top: 21rpx;
+  padding-top: 21rpx;
 }
 
 .available {
-  gap: 8rpx;
-  color: #8b95a6;
-  font-size: 24rpx;
-  font-weight: 600;
-}
-
-.clock {
-  font-size: 25rpx;
+  gap: 7rpx;
+  color: #6b7280;
+  font-size: 21rpx;
+  font-weight: 400;
 }
 
 .price-wrap {
@@ -181,15 +181,15 @@ defineEmits<{
 
 .price-main {
   color: #ff3b6b;
-  font-size: 36rpx;
-  font-weight: 900;
+  font-size: 35rpx;
+  font-weight: 800;
   line-height: 1;
 }
 
 .price-unit {
-  margin-left: 4rpx;
-  color: #9aa3b2;
-  font-size: 22rpx;
-  font-weight: 700;
+  margin-left: 3rpx;
+  color: #9ca3af;
+  font-size: 21rpx;
+  font-weight: 400;
 }
 </style>

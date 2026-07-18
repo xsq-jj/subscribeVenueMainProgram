@@ -7,6 +7,7 @@ export type SportCategory = {
 
 export type Venue = {
   id: number
+  categoryId?: number
   name: string
   cover: string
   score: number
@@ -18,6 +19,13 @@ export type Venue = {
   todayAvailableText: string
   minPrice: number
   monthlySales: string
+  city?: string
+  reviewCount?: number
+  businessHours?: string
+  availableText?: string
+  specs?: Record<string, string | number>
+  images?: Array<{ id: number; url: string }>
+  courts?: Array<{ id: number; name: string; basePrice?: number }>
 }
 
 export type VenueDate = {
@@ -29,10 +37,16 @@ export type VenueDate = {
 
 export type VenueSlot = {
   id: number
+  inventoryId?: number
+  venueId?: number
+  courtId?: number
+  courtName?: string
+  date?: string
   start: string
   end: string
   price: number
-  status: 'available' | 'soldOut' | 'selected'
+  availableStock?: number
+  status: 'available' | 'soldOut' | 'selected' | 'locked'
 }
 
 export type OrderStatus = 'WAIT_PAY' | 'WAIT_USE' | 'COMPLETED' | 'CANCELLED'
@@ -46,16 +60,35 @@ export type SportOrder = {
   slotId?: number
   venueName: string
   venueCover: string
+  venueAddress?: string
   dateText: string
   timeText: string
   courtName: string
   amount: number
+  totalAmount?: number
+  discountAmount?: number
+  payAmount?: number
+  contactName?: string
+  contactPhone?: string
+  items?: Array<{
+    id: number
+    inventoryId: number
+    venueId?: number
+    courtId: number
+    courtName?: string
+    slotDate: string
+    startTime: string
+    endTime: string
+    price: number
+    amount?: number
+  }>
 }
 
 export type CouponStatus = 'AVAILABLE' | 'USED' | 'EXPIRED'
 
 export type UserCoupon = {
   id: number
+  couponId?: number
   title: string
   description: string
   valueText: string
@@ -63,6 +96,8 @@ export type UserCoupon = {
   expireText: string
   status: CouponStatus
   theme: 'green' | 'purple' | 'orange'
+  amount?: number
+  discountRate?: number
 }
 
 export type SportRecord = {
@@ -70,6 +105,7 @@ export type SportRecord = {
   venueId: number
   venueName: string
   sportType: string
+  slotDate?: string
   dateText: string
   timeText: string
   durationHour: number
@@ -91,6 +127,7 @@ export type CityRegion = {
 
 export type VenueReview = {
   id: number
+  venueId?: number
   userName: string
   avatar: string
   rating: number
@@ -100,4 +137,5 @@ export type VenueReview = {
   likeCount: number
   commentCount: number
   merchantReply?: string
+  liked?: boolean
 }

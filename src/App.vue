@@ -1,22 +1,21 @@
 <script setup lang="ts">
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
+import { logger } from '@/utils/logger'
 
 onLaunch(() => {
-  console.log('Sport booking app launched')
+  logger.info('Sport booking app launched')
 })
 
 onShow(() => {
-  console.log('Sport booking app show')
+  logger.info('Sport booking app show')
 })
 
 onHide(() => {
-  console.log('Sport booking app hide')
+  logger.info('Sport booking app hide')
 })
 </script>
 
 <style lang="scss">
-@import './uni.scss';
-
 page {
   min-height: 100%;
   background: #f6f7f9;
@@ -32,10 +31,7 @@ uni-page-wrapper {
 }
 
 uni-tabbar {
-  right: 0 !important;
-  left: 50% !important;
-  max-width: 430px;
-  transform: translateX(-50%);
+  display: none !important;
 }
 /* #endif */
 </style>

@@ -38,17 +38,17 @@ defineEmits<{
 .date-list {
   display: inline-flex;
   gap: 14rpx;
-  padding: 0 32rpx;
+  padding: 0 35rpx;
 }
 
 .date-item {
   display: flex;
-  width: 86rpx;
-  height: 104rpx;
+  width: 98rpx;
+  height: 129rpx;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: 16rpx;
+  border-radius: 21rpx;
   background: #f4f6f8;
   color: #8b95a6;
 }
@@ -59,20 +59,20 @@ defineEmits<{
 }
 
 .week {
-  font-size: 21rpx;
-  font-weight: 700;
+  font-size: 19rpx;
+  font-weight: 500;
 }
 
 .day {
-  margin-top: 8rpx;
-  font-size: 34rpx;
+  margin-top: 4rpx;
+  font-size: 28rpx;
   font-weight: 900;
   line-height: 1;
 }
 
 .label {
-  margin-top: 8rpx;
-  font-size: 19rpx;
-  font-weight: 800;
+  margin-top: 5rpx;
+  font-size: 18rpx;
+  font-weight: 600;
 }
 </style>

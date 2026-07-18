@@ -23,66 +23,133 @@
       "style": {
         "navigationStyle": "custom"
       }
+    }
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#8b95a6",
+    "selectedColor": "#10b981",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/home/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/venue/index",
+        "text": "场地",
+        "iconPath": "static/tabbar/venue.png",
+        "selectedIconPath": "static/tabbar/venue-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/order/index",
+        "text": "订单",
+        "iconPath": "static/tabbar/order.png",
+        "selectedIconPath": "static/tabbar/order-active.png"
+      },
+      {
+        "pagePath": "pages/tabbar/profile/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/profile.png",
+        "selectedIconPath": "static/tabbar/profile-active.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "subPackages/venue",
+      "pages": [
+        {
+          "path": "detail/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "search/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "review-list/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        }
+      ]
     },
     {
-      "path": "pages/venue/detail/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
+      "root": "subPackages/order",
+      "pages": [
+        {
+          "path": "confirm/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "success/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "detail/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        }
+      ]
     },
     {
-      "path": "pages/venue/search/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
+      "root": "subPackages/user",
+      "pages": [
+        {
+          "path": "favorite/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coupon/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sport-record/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "settings/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "profile-info/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        }
+      ]
     },
     {
-      "path": "pages/location/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/favorite/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/coupon/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/sport-record/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/review/list/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/order/confirm/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/order/success/index",
-      "style": {
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/order/detail/index",
-      "style": {
-        "navigationBarTitleText": "订单详情"
-      }
+      "root": "subPackages/common",
+      "pages": [
+        {
+          "path": "location/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        }
+      ]
     }
   ],
   "globalStyle": {
